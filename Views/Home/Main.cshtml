@@ -1,0 +1,17 @@
+@using CRUDelicious.Models
+@model List<Dishes>
+<center>
+    <h1>Welcome to CRUDelicious</h1>
+</center>
+<div id="header">
+    <h5>Check out some recent dishes</h5>
+    <a href="/Add">Add a Dish</a>
+</div>
+
+<div>
+    <div class="lineBreak"></div>
+    @foreach (Dishes i in Model)
+    {
+        <p><a href="View/@i.DishId">@i.Name</a> by @i.Chef</p>
+    }
+</div>

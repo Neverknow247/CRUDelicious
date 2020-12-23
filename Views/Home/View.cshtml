@@ -1,0 +1,16 @@
+@model Dishes
+<div id="header">
+    <a href="/">Home</a>
+</div>
+<center>
+    <h1>@ViewBag.dish.Name</h1><br>
+    <h5>@ViewBag.dish.Chef</h5>
+    <div class="lineBreak"></div>
+</center>
+<p>@ViewBag.dish.Description</p>
+<p><b>Calories:</b> @ViewBag.dish.Calories</p>
+<p><b>Tastiness:</b> @ViewBag.dish.Tastiness</p>
+<div id="row">
+    <a href="Edit/@ViewBag.dish.DishId" class="btn">Edit</a>
+    <a href="Delete/@ViewBag.dish.DishId" class="btn" class="delete" style="background-color: rgb(253, 78, 78);">Delete</a>
+</div>
